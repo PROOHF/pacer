@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pacer - Calculate your running pace</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <div class="container">
+      <h1>Pacer</h1>
+      <p class="slogan">Calculate your running pace</p>
+      
+      <label for="time">Tid (hh:mm:ss)</label>
+      <input type="text" id="time" placeholder="t.ex 00:45:00">
+    
+      <label for="distance">Distans (km)</label>
+      <input type="number" step="0.01" id="distance" placeholder="t.ex 10">
+
+      <label for="pace">Tempo (mm:ss per km)</label>
+      <input type="text" id="pace" placeholder="t.ex 04:50">
+
+      <div class="pace-buttons">
+        <button onclick="setPace('03:50')">3:50</button>
+        <button onclick="setPace('04:00')">4:00</button>
+        <button onclick="setPace('04:15')">4:15</button>
+        <button onclick="setPace('04:30')">4:30</button>
+        <button onclick="setPace('04:45')">4:45</button>
+        <button onclick="setPace('05:00')">5:00</button>
+      </div>
+
+      <button onclick="calculate()">Beräkna</button>
+
+      <div class="result" id="result">
+        <p>Ange minst ett värde för att beräkna motsvarande enheter. Ange två av tre för att beräkna samtliga värden.</p>
+      </div>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
