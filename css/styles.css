@@ -8,6 +8,7 @@
   --button-hover: #3f4096;
   --muted: #374151;
   --result: #181723;
+  --result-bg: #d6d6d6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +21,7 @@
     --button-hover: #3f4096;
     --muted: #5b6179;
     --result: #181723;
+    --result-bg: #5b6179;
   }
 }
 
@@ -133,7 +135,7 @@ button:active {
 .result {
   margin-top: 24px;
   padding: 16px;
-  background: #f1f5f9;
+  background: var(--result-bg);
   border-radius: 4px;
   font-size: 15px;
   animation: fadeInUp 0.4s ease;
