@@ -30,17 +30,24 @@
       <label for="distance">Distans (km)</label>
       <input type="number" step="0.01" id="distance" placeholder="t.ex 10">
 
+      <div class="quick-buttons"">
+        <button onclick="setDistance('5')">5 km</button>
+        <button onclick="setDistance('10')">10 km</button>
+        <button onclick="setDistance('21.1')">21.1 km</button>
+        <button onclick="setDistance('42.2')">42.2 km</button>
+      </div>
+
       <label for="pace">Tempo (mm:ss per km)</label>
       <input type="text" id="pace" placeholder="t.ex 04:50">
 
-      <div class="pace-buttons">
+      <div class="quick-buttons">
         <button onclick="setPace('03:50')">3:50</button>
         <button onclick="setPace('03:55')">3:55</button>
         <button onclick="setPace('04:00')">4:00</button>
         <button onclick="setPace('04:05')">4:05</button>
         <button onclick="setPace('04:10')">4:10</button>
       </div>
-      <div class="pace-buttons">
+      <div class="quick-buttons">
         <button onclick="setPace('04:15')">4:15</button>
         <button onclick="setPace('04:30')">4:30</button>
         <button onclick="setPace('04:45')">4:45</button>
@@ -48,8 +55,9 @@
         <button onclick="setPace('05:15')">5:15</button>
       </div>
 
-      <button onclick="calculate()">Beräkna</button>
-
+      <button id="calculate" onclick="calculate()">Beräkna</button>
+      <button id="clearBtn" onclick="clearInput()">Rensa</button>
+      
       <div class="result" id="result">
         <p>Ange minst ett värde för att beräkna motsvarande enheter. Ange två av tre för att beräkna samtliga värden.</p>
       </div>

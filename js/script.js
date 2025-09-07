@@ -29,6 +29,10 @@ function formatPace(seconds) {
   return `${m}:${s}`;
 }
 
+function setDistance(value) {
+  document.getElementById("distance").value = value;
+}
+
 function setPace(value) {
   document.getElementById("pace").value = value;
 }
@@ -53,7 +57,7 @@ function calculate() {
   } else if (timeSec && distance && !paceSec) {
     finalPace = timeSec / distance;
   } else if (!(timeSec && distance && paceSec)) {
-    document.getElementById("result").innerHTML = "<p style='color:white'>Ange minst två värden i korrekt format!</p>";
+    document.getElementById("result").innerHTML = "<p>Ange minst två värden i korrekt format!</p>";
     return;
   }
 
@@ -65,4 +69,13 @@ function calculate() {
     <p><strong>Tempo:</strong> ${formatPace(Math.round(finalPace))} min/km</p>
     <p><strong>Hastighet:</strong> ${speed.toFixed(2)} km/h</p>
   `;
+}
+
+function clearInput() {
+    var time = document.getElementById("time");
+    var distance = document.getElementById("distance");
+    var pace = document.getElementById("pace");
+    time.value = '';
+    distance.value = '';
+    pace.value = '';
 }

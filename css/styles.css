@@ -8,6 +8,7 @@
   --button-hover: #3f4096;
   --muted: #374151;
   --result: #181723;
+  --clearBtnBg: #5b6179;
   --result-bg: #d6d6d6;
 }
 
@@ -21,6 +22,7 @@
     --button-hover: #3f4096;
     --muted: #5b6179;
     --result: #181723;
+    --clearBtnBg: #000;
     --result-bg: #5b6179;
   }
 }
@@ -87,14 +89,14 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
 }
 
-.pace-buttons {
+.quick-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 0px;
 }
 
-.pace-buttons button {
+.quick-buttons button {
   flex: 1;
   padding: 8px;
   font-size: 14px;
@@ -106,8 +108,16 @@ input:focus {
   transition: background 0.2s;
 }
 
-.pace-buttons button:hover {
+.quick-buttons button:hover {
   background: var(--button-hover);
+}
+
+#clearBtn {
+  background: var(--clearBtnBg);
+}
+
+#clearBtn:hover {
+  background: red;
 }
 
 button {
