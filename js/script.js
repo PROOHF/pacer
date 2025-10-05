@@ -38,9 +38,17 @@ function setPace(value) {
 }
 
 function calculate() {
-  const timeStr = document.getElementById("time").value;
+  let timeStr = document.getElementById("time").value.trim();
   const distance = parseFloat(document.getElementById("distance").value);
   const paceStr = document.getElementById("pace").value;
+
+  if (/^\d+$/.test(timeStr)) {
+    let totalMinutes = parseInt(timeStr, 10);
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    timeStr = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:00`;
+    document.getElementById("time").value = timeStr;
+  }
 
   const timeSec = parseTimeToSeconds(timeStr);
   const paceSec = parsePaceToSeconds(paceStr);
@@ -48,7 +56,6 @@ function calculate() {
   let finalTime = timeSec;
   let finalDistance = distance;
   let finalPace = paceSec;
-
 
   if (!timeSec && distance && paceSec) {
     finalTime = distance * paceSec;
