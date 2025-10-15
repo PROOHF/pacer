@@ -5,12 +5,11 @@
   --text: #111;
   --card-bg: #fff;
   --primary: #6b6dde;
-  --quick-buttons-bg: #d6d6d6;
+  --quick-buttons-bg: #e6e6e6;
   --quick-buttons-text: #000;
   --quick-buttons-hover-bg: #6b6dde;
   --muted: #374151;
   --calculate-button-bg-hover:#3f4096;
-  --clear-button-bg: #5b6179;
   --result: #181723;
   --result-bg: #d6d6d6;
 }
@@ -27,7 +26,6 @@
     --quick-buttons-hover-bg: #3f4096;
     --muted: #5b6179;
     --calculate-button-bg-hover:#3f4096;
-    --clear-button-bg: #000;
     --result: #181723;
     --result-bg: #5b6179;
   }
@@ -150,7 +148,7 @@ button:active {
 #clearBtn {
   color:#fff;
   flex: 2;
-  background: var(--clear-button-bg);
+  background: #EE4266;
 }
 
 #clearBtn:hover {
