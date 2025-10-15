@@ -85,4 +85,6 @@ function clearInput() {
     time.value = '';
     distance.value = '';
     pace.value = '';
+
+    document.getElementById("result").innerHTML = "<p>Ange minst två värden i korrekt format!</p>";
 }
