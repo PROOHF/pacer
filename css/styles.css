@@ -1,4 +1,3 @@
-
 /* LIGHT THEME */
 :root {
   --bg: #f5f7fa;
@@ -9,7 +8,7 @@
   --quick-buttons-text: #000;
   --quick-buttons-hover-bg: #6b6dde;
   --muted: #374151;
-  --calculate-button-bg-hover:#3f4096;
+  --calculate-button-bg-hover: #3f4096;
   --result: #181723;
   --result-bg: #d6d6d6;
 }
@@ -22,13 +21,17 @@
     --card-bg: #10101a;
     --primary: #6b6dde;
     --quick-buttons-bg: #212038;
-    --quick-buttons-text: #fff;;
+    --quick-buttons-text: #fff;
     --quick-buttons-hover-bg: #3f4096;
     --muted: #5b6179;
-    --calculate-button-bg-hover:#3f4096;
+    --calculate-button-bg-hover: #3f4096;
     --result: #181723;
     --result-bg: #5b6179;
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -44,11 +47,11 @@ body {
 }
 
 .container {
+  margin: 20px 0px;
   background: var(--card-bg);
   padding: 24px;
-  margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   max-width: 420px;
   width: 100%;
   animation: fadeIn 0.4s ease;
@@ -78,7 +81,7 @@ label {
 }
 
 input {
-  width: 94%;
+  width: 100%;
   padding: 12px;
   font-size: 16px;
   border: 1px solid #cbd5e1;
@@ -91,7 +94,7 @@ input {
 
 input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
 .quick-buttons {
@@ -146,7 +149,7 @@ button:active {
 }
 
 #clearBtn {
-  color:#fff;
+  color: #fff;
   flex: 2;
   background: #EE4266;
 }
@@ -174,11 +177,25 @@ button:active {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
