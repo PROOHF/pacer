@@ -48,6 +48,7 @@ body {
 }
 
 .container {
+  margin: 20px 0px;
   background: var(--card-bg);
   padding: 24px;
   border-radius: 8px;
