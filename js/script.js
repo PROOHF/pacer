@@ -23,6 +23,14 @@ function parsePaceToSeconds(paceStr) {
   return parts[0] * 60 + parts[1];
 }
 
+function addOne() {
+    const btn = document.getElementById('distance-button');
+    const input = document.getElementById('distance');
+
+    let currentValue = Number(input.value);
+    input.value = currentValue + 1;
+}
+
 function formatPace(seconds) {
   const m = String(Math.floor(seconds / 60)).padStart(2, "0");
   const s = String(seconds % 60).padStart(2, "0");

@@ -28,7 +28,12 @@
       <input type="text" id="time" placeholder="t.ex 00:45:00 eller 55">
     
       <label for="distance">Distans (km)</label>
-      <input type="number" step="0.01" id="distance" placeholder="t.ex 10">
+      <div class="btn-group-distance">
+        <input type="number" step="0.01" id="distance" placeholder="t.ex 10">
+        <button class="btn" id="distance-button" onclick="addOne()">
+          + 1
+        </button>
+      </div>
 
       <div class="quick-buttons"">
         <button onclick="setDistance('1')">1 km</button>
@@ -56,7 +61,7 @@
         <button onclick="setPace('05:15')">5:15</button>
       </div>
 
-      <div class="btn-group">
+      <div class="btn-group-calculate">
         <button class="btn" id="calculateBtn" onclick="calculate()">Beräkna</button>
         <button class="btn" id="clearBtn" onclick="clearInput()">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">

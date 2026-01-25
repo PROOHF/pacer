@@ -120,7 +120,22 @@ input:focus {
   background: var(--quick-buttons-hover-bg);
 }
 
-.btn-group {
+.btn-group-distance {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+#distance {
+  flex: 8;
+}
+
+#distance-button {
+  margin: 0;
+  flex: 2;
+}
+
+.btn-group-calculate {
   display: flex;
   width: 100%;
   gap: 10px;
