@@ -2,7 +2,6 @@
 :root {
   --bg: #f5f7fa;
   --text: #111;
-  --card-bg: #fff;
   --primary: #6b6dde;
   --quick-buttons-bg: #e6e6e6;
   --quick-buttons-text: #000;
@@ -16,9 +15,8 @@
 /* DARK THEME */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0b0c14;
+    --bg: #10101a;
     --text: #fff;
-    --card-bg: #10101a;
     --primary: #6b6dde;
     --quick-buttons-bg: #212038;
     --quick-buttons-text: #fff;
@@ -48,7 +46,7 @@ body {
 
 .container {
   margin: 20px 0px;
-  background: var(--card-bg);
+  background: var(--bg);
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -88,7 +86,7 @@ input {
   border-radius: 4px;
   outline: none;
   transition: border 0.2s ease, background 0.3s, color 0.3s;
-  background: var(--card-bg);
+  background: var(--bg);
   color: var(--text);
 }
 

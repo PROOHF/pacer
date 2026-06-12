@@ -45,6 +45,10 @@ function setPace(value) {
   document.getElementById("pace").value = value;
 }
 
+function setTime(value) {
+  document.getElementById("time").value = value;
+}
+
 function calculate() {
   let timeStr = document.getElementById("time").value.trim();
   const distance = parseFloat(document.getElementById("distance").value);
@@ -61,6 +65,11 @@ function calculate() {
   const timeSec = parseTimeToSeconds(timeStr);
   const paceSec = parsePaceToSeconds(paceStr);
 
+  if (timeSec && distance && paceSec) {
+    document.getElementById("result").innerHTML = "<p>Enter at least two values in correct format!</p>";
+    return;
+  }
+
   let finalTime = timeSec;
   let finalDistance = distance;
   let finalPace = paceSec;
@@ -72,17 +81,17 @@ function calculate() {
   } else if (timeSec && distance && !paceSec) {
     finalPace = timeSec / distance;
   } else if (!(timeSec && distance && paceSec)) {
-    document.getElementById("result").innerHTML = "<p>Ange minst två värden i korrekt format!</p>";
+    document.getElementById("result").innerHTML = "<p>Enter at least two values in correct format!</p>";
     return;
   }
 
   const speed = finalDistance / (finalTime / 3600);
 
   document.getElementById("result").innerHTML = `
-    <p><strong>Tid:</strong> ${formatSecondsToTime(finalTime)}</p>
-    <p><strong>Distans:</strong> ${finalDistance.toFixed(2)} km</p>
-    <p><strong>Tempo:</strong> ${formatPace(Math.round(finalPace))} min/km</p>
-    <p><strong>Hastighet:</strong> ${speed.toFixed(2)} km/h</p>
+    <p><strong>Time:</strong> ${formatSecondsToTime(finalTime)}</p>
+    <p><strong>Distance:</strong> ${finalDistance.toFixed(2)} km</p>
+    <p><strong>Pace:</strong> ${formatPace(Math.round(finalPace))} min/km</p>
+    <p><strong>Speed:</strong> ${speed.toFixed(2)} km/h</p>
   `;
 }
 
@@ -94,5 +103,5 @@ function clearInput() {
     distance.value = '';
     pace.value = '';
 
-    document.getElementById("result").innerHTML = "<p>Ange minst två värden i korrekt format!</p>";
+    document.getElementById("result").innerHTML = "<p>Enter at least two values in correct format!</p>";
 }
